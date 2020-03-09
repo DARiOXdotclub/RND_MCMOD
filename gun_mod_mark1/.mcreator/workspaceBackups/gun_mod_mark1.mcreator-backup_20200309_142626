@@ -48,54 +48,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "CopperOre",
-      "type": "block",
-      "sortid": 6,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "CopperOreBlock",
-      "type": "block",
-      "sortid": 7,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "CopperIngot",
-      "type": "item",
-      "sortid": 8,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "CopperOreBlockRecipe",
-      "type": "recipe",
-      "sortid": 9,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "CopperBlockOreRecipe",
-      "type": "recipe",
-      "sortid": 10,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "CopperOreSmelting",
-      "type": "recipe",
-      "sortid": 11,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -103,12 +55,9 @@
   "language_map": {
     "en_us": {
       "item.gun_mod_mark1.mark1": "Mark1",
-      "item.gun_mod_mark1.copperingot": "Copper",
       "item.gun_mod_mark1.ak47": "Ak47",
-      "block.gun_mod_mark1.copperoreblock": "Block of Copper",
       "item.gun_mod_mark1.ammo": "Ammo",
-      "item.gun_mod_mark1.ak47ammo": "Ak47ammo",
-      "block.gun_mod_mark1.copperore": "Copper Ore"
+      "item.gun_mod_mark1.ak47ammo": "Ak47ammo"
     }
   },
   "workspaceSettings": {

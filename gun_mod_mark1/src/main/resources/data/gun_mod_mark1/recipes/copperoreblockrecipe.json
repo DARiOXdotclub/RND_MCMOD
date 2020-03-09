@@ -1,0 +1,42 @@
+{
+  "group": "gun_mod_mark1",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "gun_mod_mark1:copperingot"
+    },
+    "1": {
+      "item": "gun_mod_mark1:copperingot"
+    },
+    "2": {
+      "item": "gun_mod_mark1:copperingot"
+    },
+    "3": {
+      "item": "gun_mod_mark1:copperingot"
+    },
+    "4": {
+      "item": "gun_mod_mark1:copperingot"
+    },
+    "5": {
+      "item": "gun_mod_mark1:copperingot"
+    },
+    "6": {
+      "item": "gun_mod_mark1:copperingot"
+    },
+    "7": {
+      "item": "gun_mod_mark1:copperingot"
+    },
+    "8": {
+      "item": "gun_mod_mark1:copperingot"
+    }
+  },
+  "result": {
+    "item": "gun_mod_mark1:copperoreblock",
+    "count": 1
+  }
+}

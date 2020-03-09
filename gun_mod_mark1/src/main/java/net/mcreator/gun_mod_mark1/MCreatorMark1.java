@@ -38,6 +38,20 @@ public class MCreatorMark1 extends Elementsgun_mod_mark1.ModElement {
 				return null;
 			}
 		}, 3, -4F, new Item.Properties().group(ItemGroup.COMBAT)) {
+			@Override
+			public boolean hitEntity(ItemStack itemstack, LivingEntity entity, LivingEntity entity2) {
+				boolean retval = super.hitEntity(itemstack, entity, entity2);
+				int x = (int) entity.posX;
+				int y = (int) entity.posY;
+				int z = (int) entity.posZ;
+				World world = entity.world;
+				{
+					java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+					$_dependencies.put("entity", entity);
+					MCreatorMark1MobIsHitWithTool.executeProcedure($_dependencies);
+				}
+				return retval;
+			}
 		}.setRegistryName("mark1"));
 	}
 }

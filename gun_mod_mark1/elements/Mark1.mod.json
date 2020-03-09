@@ -18,6 +18,9 @@
     "usageCount": 750,
     "blocksAffected": [],
     "hasGlow": false,
-    "repairItems": []
+    "repairItems": [],
+    "onEntityHitWith": {
+      "name": "Mark1MobIsHitWithTool"
+    }
   }
 }
