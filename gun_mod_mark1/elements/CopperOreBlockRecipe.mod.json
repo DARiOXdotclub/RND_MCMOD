@@ -6,35 +6,35 @@
     "recipeRetstackSize": 1,
     "recipeShapeless": false,
     "recipeReturnStack": {
-      "value": "CUSTOM:CopperOreBlock"
+      "value": "CUSTOM:Mark1"
     },
     "recipeSlots": [
       {
-        "value": "CUSTOM:CopperIngot"
+        "value": ""
       },
       {
-        "value": "CUSTOM:CopperIngot"
+        "value": ""
       },
       {
-        "value": "CUSTOM:CopperIngot"
+        "value": ""
       },
       {
-        "value": "CUSTOM:CopperIngot"
+        "value": "Items.IRON_INGOT"
       },
       {
-        "value": "CUSTOM:CopperIngot"
+        "value": "Items.IRON_INGOT"
       },
       {
-        "value": "CUSTOM:CopperIngot"
+        "value": "Items.IRON_INGOT"
       },
       {
-        "value": "CUSTOM:CopperIngot"
+        "value": ""
       },
       {
-        "value": "CUSTOM:CopperIngot"
+        "value": "CUSTOM:Ammo"
       },
       {
-        "value": "CUSTOM:CopperIngot"
+        "value": ""
       }
     ],
     "smeltingXPReward": 0.0,
