@@ -16,22 +16,6 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
-    },
-    {
-      "name": "Ak47",
-      "type": "tool",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "Ak47ammo",
-      "type": "item",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -39,9 +23,7 @@
   "language_map": {
     "en_us": {
       "item.gun_mod_mark1.mark1": "Mark1",
-      "item.gun_mod_mark1.ak47": "Ak47",
-      "item.gun_mod_mark1.ammo": "Ammo",
-      "item.gun_mod_mark1.ak47ammo": "Ak47ammo"
+      "item.gun_mod_mark1.ammo": "Ammo"
     }
   },
   "workspaceSettings": {
