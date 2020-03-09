@@ -15,29 +15,29 @@ public class MCreatorMark1 extends Elementsgun_mod_mark1.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new SwordItem(new IItemTier() {
 			public int getMaxUses() {
-				return 100;
+				return 750;
 			}
 
 			public float getEfficiency() {
-				return 4f;
+				return 0f;
 			}
 
 			public float getAttackDamage() {
-				return 4f;
+				return -2f;
 			}
 
 			public int getHarvestLevel() {
-				return 1;
+				return 0;
 			}
 
 			public int getEnchantability() {
-				return 2;
+				return 0;
 			}
 
 			public Ingredient getRepairMaterial() {
 				return null;
 			}
-		}, 3, -3F, new Item.Properties().group(ItemGroup.COMBAT)) {
+		}, 3, -4F, new Item.Properties().group(ItemGroup.COMBAT)) {
 		}.setRegistryName("mark1"));
 	}
 }
