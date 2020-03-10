@@ -8,7 +8,7 @@ public class MCreatorCopperIngot extends Elementsgun_mod_mark1.ModElement {
 	public static final Item block = null;
 
 	public MCreatorCopperIngot(Elementsgun_mod_mark1 instance) {
-		super(instance, 8);
+		super(instance, 7);
 	}
 
 	@Override

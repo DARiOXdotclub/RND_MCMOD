@@ -3,7 +3,7 @@ package net.mcreator.gun_mod_mark1;
 @Elementsgun_mod_mark1.ModElement.Tag
 public class MCreatorMark1MobIsHitWithTool extends Elementsgun_mod_mark1.ModElement {
 	public MCreatorMark1MobIsHitWithTool(Elementsgun_mod_mark1 instance) {
-		super(instance, 5);
+		super(instance, 8);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {

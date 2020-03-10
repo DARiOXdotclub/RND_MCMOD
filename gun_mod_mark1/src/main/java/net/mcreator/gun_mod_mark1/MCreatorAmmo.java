@@ -8,7 +8,7 @@ public class MCreatorAmmo extends Elementsgun_mod_mark1.ModElement {
 	public static final Item block = null;
 
 	public MCreatorAmmo(Elementsgun_mod_mark1 instance) {
-		super(instance, 2);
+		super(instance, 3);
 	}
 
 	@Override

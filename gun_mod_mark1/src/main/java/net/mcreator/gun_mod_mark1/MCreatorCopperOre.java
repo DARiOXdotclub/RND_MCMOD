@@ -12,7 +12,7 @@ public class MCreatorCopperOre extends Elementsgun_mod_mark1.ModElement {
 	public static final Block block = null;
 
 	public MCreatorCopperOre(Elementsgun_mod_mark1 instance) {
-		super(instance, 6);
+		super(instance, 5);
 	}
 
 	@Override
