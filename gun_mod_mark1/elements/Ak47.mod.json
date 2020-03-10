@@ -18,6 +18,15 @@
     "usageCount": 100,
     "blocksAffected": [],
     "hasGlow": false,
-    "repairItems": []
+    "repairItems": [],
+    "onRightClickedInAir": {
+      "name": "Ak47RightClickedInAir"
+    },
+    "onCrafted": {
+      "name": "Ak47ItemIsCraftedsmelted"
+    },
+    "onEntityHitWith": {
+      "name": "Ak47MobIsHitWithTool"
+    }
   }
 }

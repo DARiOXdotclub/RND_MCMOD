@@ -14,6 +14,47 @@ public class MCreatorAk47 extends Elementsgun_mod_mark1.ModElement {
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemToolCustom() {
+			@Override
+			public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity entity, Hand hand) {
+				ActionResult<ItemStack> retval = super.onItemRightClick(world, entity, hand);
+				ItemStack itemstack = retval.getResult();
+				int x = (int) entity.posX;
+				int y = (int) entity.posY;
+				int z = (int) entity.posZ;
+				{
+					java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+					$_dependencies.put("world", world);
+					MCreatorAk47RightClickedInAir.executeProcedure($_dependencies);
+				}
+				return retval;
+			}
+
+			@Override
+			public void onCreated(ItemStack itemstack, World world, PlayerEntity entity) {
+				super.onCreated(itemstack, world, entity);
+				int x = (int) entity.posX;
+				int y = (int) entity.posY;
+				int z = (int) entity.posZ;
+				{
+					java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+					MCreatorAk47ItemIsCraftedsmelted.executeProcedure($_dependencies);
+				}
+			}
+
+			@Override
+			public boolean hitEntity(ItemStack itemstack, LivingEntity entity, LivingEntity entity2) {
+				boolean retval = super.hitEntity(itemstack, entity, entity2);
+				int x = (int) entity.posX;
+				int y = (int) entity.posY;
+				int z = (int) entity.posZ;
+				World world = entity.world;
+				{
+					java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+					$_dependencies.put("entity", entity);
+					MCreatorAk47MobIsHitWithTool.executeProcedure($_dependencies);
+				}
+				return retval;
+			}
 		}.setRegistryName("ak47"));
 	}
 
