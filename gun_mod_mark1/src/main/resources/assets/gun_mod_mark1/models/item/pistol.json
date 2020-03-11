@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "gun_mod_mark1:items/pistol2"
+    "layer0": "gun_mod_mark1:items/mini_gun_mark1"
   },
   "display": {
     "thirdperson_righthand": {

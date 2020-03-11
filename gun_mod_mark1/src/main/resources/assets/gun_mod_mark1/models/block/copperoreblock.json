@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "gun_mod_mark1:blocks/copper_ore_block",
-    "particle": "gun_mod_mark1:blocks/copper_ore_block"
-  }
-}

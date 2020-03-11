@@ -52,13 +52,19 @@ public class MCreatorPistol extends Elementsgun_mod_mark1.ModElement {
 		}
 
 		@Override
+		@OnlyIn(Dist.CLIENT)
+		public boolean hasEffect(ItemStack itemstack) {
+			return true;
+		}
+
+		@Override
 		public void onPlayerStoppedUsing(ItemStack itemstack, World world, LivingEntity entityLiving, int timeLeft) {
 			if (!world.isRemote && entityLiving instanceof ServerPlayerEntity) {
 				ServerPlayerEntity entity = (ServerPlayerEntity) entityLiving;
 				int slotID = -1;
 				for (int i = 0; i < entity.inventory.mainInventory.size(); i++) {
 					ItemStack stack = entity.inventory.mainInventory.get(i);
-					if (stack != null && stack.getItem() == new ItemStack(MCreatorAmmo.block, (int) (1)).getItem()) {
+					if (stack != null && stack.getItem() == new ItemStack(MCreatorMINIGUNMAG.block, (int) (1)).getItem()) {
 						slotID = i;
 						break;
 					}
@@ -70,19 +76,19 @@ public class MCreatorPistol extends Elementsgun_mod_mark1.ModElement {
 					entityarrow.setSilent(true);
 					entityarrow.setIsCritical(false);
 					entityarrow.setDamage(5);
-					entityarrow.setKnockbackStrength(5);
+					entityarrow.setKnockbackStrength(3);
 					itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
 					int x = (int) entity.posX;
 					int y = (int) entity.posY;
 					int z = (int) entity.posZ;
 					world.playSound((PlayerEntity) null, (double) x, (double) y, (double) z,
-							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.husk.death")),
 							SoundCategory.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 					if (entity.abilities.isCreativeMode) {
 						entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.CREATIVE_ONLY;
 					} else {
 						ItemStack stack = entity.inventory.getStackInSlot(slotID);
-						if (new ItemStack(MCreatorAmmo.block, (int) (1)).isDamageable()) {
+						if (new ItemStack(MCreatorMINIGUNMAG.block, (int) (1)).isDamageable()) {
 							if (stack.attemptDamageItem(1, random, entity)) {
 								stack.shrink(1);
 								stack.setDamage(0);
@@ -127,12 +133,12 @@ public class MCreatorPistol extends Elementsgun_mod_mark1.ModElement {
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public ItemStack getItem() {
-			return new ItemStack(MCreatorAmmo.block, (int) (1));
+			return new ItemStack(MCreatorRIFALAMMO.block, (int) (1));
 		}
 
 		@Override
 		protected ItemStack getArrowStack() {
-			return new ItemStack(MCreatorAmmo.block, (int) (1));
+			return new ItemStack(MCreatorMINIGUNMAG.block, (int) (1));
 		}
 
 		@Override
@@ -153,6 +159,15 @@ public class MCreatorPistol extends Elementsgun_mod_mark1.ModElement {
 		protected void arrowHit(LivingEntity entity) {
 			super.arrowHit(entity);
 			entity.setArrowCountInEntity(entity.getArrowCountInEntity() - 1);
+			int x = (int) this.posX;
+			int y = (int) this.posY;
+			int z = (int) this.posZ;
+			World world = this.world;
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("entity", entity);
+				MCreatorPistolBulletHitsLivingEntity.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override
